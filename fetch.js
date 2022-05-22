@@ -11,5 +11,11 @@ fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/search?que
 .then(response => {
     return response.json()
 }).then(jokes => {
-    console.log(jokes.result);
+    // console.log(jokes.result);
+    const comedy = jokes.result.map(jokeline => {
+        return `
+            <p class="joke">${jokeline.value}</p>
+        `
+    })
+    document.querySelector("#cnjokes").insertAdjacentHTML('afterbegin', comedy);
 })
