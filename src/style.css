@@ -67,3 +67,37 @@ p {
     padding-top: 5rem;
     padding-right: 15rem;
 }
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 36px;
+        color: rgb(189, 12, 12);
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #cnjokes {
+        padding: 5rem;
+    }
+
+    .myButton {
+        font-size: 13px;
+        padding: 10px 18px;
+    }
+
+    .btn {
+        justify-content: left;
+        padding-top: 0;
+        padding-left: 1.5rem;
+    }
+
+    #chuck_gif {
+        padding-top: 3rem;
+    }
+
+    img{
+        height: 200px;
+    }
+}
