@@ -44,12 +44,11 @@ function newjoke() {
 		})
 }
 
-
 function copy() {
 	let jokecopy = document.getElementById('hello').innerHTML;
 	navigator.clipboard.writeText(jokecopy)
 		.then(() => {
-			alert("Following joke has been copied to clipboard: " + jokecopy);
+			alert("Following joke has been copied to clipboard: " + "\r" + jokecopy);
 		}).catch(err => {
 			alert("Something went wrong...");
 		})
