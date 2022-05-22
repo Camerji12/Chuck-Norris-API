@@ -1,4 +1,5 @@
 let jok = document.getElementById('hello');
+// let jokecopy = document.getElementById('hello');
 
 const options = {
 	method: 'GET',
@@ -35,5 +36,17 @@ function newjoke() {
 		}).then(jokes => {
 			console.log(jokes.value);
 			jok.innerHTML = jokes.value;
+		})
+}
+
+
+function copy() {
+	let jokecopy = document.getElementById('hello').innerHTML;
+	navigator.clipboard.writeText(jokecopy)
+		.then(() => {
+			alert("Following joke has been copied to clipboard: " + "\r" + err);
+		})
+		.catch(err => {
+			alert("Something went wrong...");
 		})
 }
