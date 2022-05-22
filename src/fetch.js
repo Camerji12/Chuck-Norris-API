@@ -1,5 +1,4 @@
-let jok = document.getElementById('hello');
-// let jokecopy = document.getElementById('hello');
+let jok = document.getElementById('content');
 
 const options = {
 	method: 'GET',
@@ -22,7 +21,7 @@ fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', o
 	})
 
 function newjoke() {
-	let jok = document.getElementById('hello');
+	let jok = document.getElementById('content');
 
 	const options = {
 		method: 'GET',
@@ -37,7 +36,6 @@ function newjoke() {
 		.then(response => {
 			return response.json();
 		}).then(jokes => {
-			console.log(jokes.value);
 			jok.innerHTML = jokes.value;
 		}).catch(err => {
 			alert("Something went wrong...");
@@ -45,7 +43,7 @@ function newjoke() {
 }
 
 function copy() {
-	let jokecopy = document.getElementById('hello').innerHTML;
+	let jokecopy = document.getElementById('content').innerHTML;
 	navigator.clipboard.writeText(jokecopy)
 		.then(() => {
 			alert("Following joke has been copied to clipboard: " + "\r" + jokecopy);
