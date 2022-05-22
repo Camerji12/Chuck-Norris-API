@@ -17,6 +17,9 @@ fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', o
 		console.log(jokes.value);
 		jok.innerHTML = jokes.value;
 	})
+	.catch(err => {
+		alert("Something went wrong...");
+	})
 
 function newjoke() {
 	let jok = document.getElementById('hello');
@@ -36,6 +39,8 @@ function newjoke() {
 		}).then(jokes => {
 			console.log(jokes.value);
 			jok.innerHTML = jokes.value;
+		}).catch(err => {
+			alert("Something went wrong...");
 		})
 }
 
@@ -45,8 +50,7 @@ function copy() {
 	navigator.clipboard.writeText(jokecopy)
 		.then(() => {
 			alert("Following joke has been copied to clipboard: " + jokecopy);
-		})
-		.catch(err => {
+		}).catch(err => {
 			alert("Something went wrong...");
 		})
 }
