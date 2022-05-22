@@ -24,7 +24,11 @@ h1 {
 
 p {
     color: aliceblue;
-    font-size: 36px;
+    font-size: 30px;
+    background-color: #42240e7a;
+    border: 1px #1d0f067a solid;
+    border-radius: 10px;
+    padding: 0 1.5rem 0 1.5rem;
 }
 
 #cnjokes {
@@ -79,7 +83,7 @@ p {
     }
 
     #cnjokes {
-        padding: 5rem;
+        padding: 7rem 0rem 3rem 0rem;
     }
 
     .myButton {
@@ -89,15 +93,19 @@ p {
 
     .btn {
         justify-content: left;
-        padding-top: 0;
-        padding-left: 1.5rem;
+        padding: 0rem 0rem 2.5rem 1.5rem;
     }
 
     #chuck_gif {
         padding-top: 3rem;
     }
 
-    img{
+    img {
         height: 200px;
+    }
+
+    p {
+        background-color: #00000000;
+        border: none;
     }
 }
