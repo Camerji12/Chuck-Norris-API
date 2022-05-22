@@ -99,7 +99,7 @@ p {
     }
 
     #cnjokes {
-        padding: 7rem 0rem 3rem 0rem;
+        padding: 3rem 0rem 3rem 0rem;
     }
 
     .myButton {
@@ -108,6 +108,11 @@ p {
     }
 
     .btn {
+        justify-content: left;
+        padding: 0rem 0rem 0.5rem 1.5rem;
+    }
+
+    .btn_save {
         justify-content: left;
         padding: 0rem 0rem 2.5rem 1.5rem;
     }
