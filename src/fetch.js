@@ -1,15 +1,17 @@
 let jok = document.getElementById('content');
+const apiKey = "345cd23516mshed85a5e5a8a352fp1b3b3ajsn468a1f67f88a"
 
 const options = {
 	method: 'GET',
 	headers: {
 		accept: 'application/json',
 		'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com',
-		'X-RapidAPI-Key': '345cd23516mshed85a5e5a8a352fp1b3b3ajsn468a1f67f88a'
+		'X-RapidAPI-Key': apiKey
 	}
 };
 
-fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', options)
+function fetchAPI(){
+	fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', options)
 	.then(response => {
 		return response.json();
 	}).then(jokes => {
@@ -19,27 +21,12 @@ fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', o
 	.catch(err => {
 		alert("Something went wrong...");
 	})
+}
+
+fetchAPI();
 
 function newjoke() {
-	let jok = document.getElementById('content');
-
-	const options = {
-		method: 'GET',
-		headers: {
-			accept: 'application/json',
-			'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com',
-			'X-RapidAPI-Key': '345cd23516mshed85a5e5a8a352fp1b3b3ajsn468a1f67f88a'
-		}
-	};
-
-	fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', options)
-		.then(response => {
-			return response.json();
-		}).then(jokes => {
-			jok.innerHTML = jokes.value;
-		}).catch(err => {
-			alert("Something went wrong...");
-		})
+	fetchAPI();
 }
 
 function copy() {
